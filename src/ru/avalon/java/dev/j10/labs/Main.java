@@ -1,17 +1,12 @@
 package ru.avalon.java.dev.j10.labs;
 
 import ru.avalon.java.dev.j10.labs.models.Person;
+import ru.avalon.java.dev.j10.labs.commons.Address; // для проверки работы класса Address
+import ru.avalon.java.dev.j10.labs.models.Passport; // для проверки работы класса Passport
 
 public class Main {
 
-    Main() {
-
-        /*
-         * FIXME(Студент): Измените определение метода так, чтобы он стал точкой входа в приложение.
-         */
-
-        Person ivanov = null;
-        Person smith = null;
+    public static void main(String[] args) { // точка входа в приложение
 
         /*
          * TODO(Студент): Создайте экземпляры класса 'Person'
@@ -24,6 +19,15 @@ public class Main {
          *    чтобы она адресовала объект типа 'Person'
          *    описывающий человека по имени 'John Edvard Smith'.
          */
+        Person ivanov = new Person(
+                new Passport("10104017658", "Ivan", "Ivanov", "Ivanovich", 1, 2, 1993, 4, 5, 2017, "Spb"),
+                new Address("Russia", "Saint-Petersburg", "Obruchevich", 1, 1)
+        );
+
+        Person smith = new Person(
+                new Passport("10104017658", "John", "Smith", null, "Edvard", 1, 2, 1993, 4, 5, 2017, "Spb"), // поля ФИО для иностранного имени в конструкторе имеют другой порядок
+                new Address("Russia", "Saint-Petersburg", "Obruchevich", 1, 2)
+        );
 
         /*
          * TODO(Студент): Создайте несколько строковых переменных:
@@ -44,6 +48,15 @@ public class Main {
          *    человека, описанного объектом, адресованным
          *    переменной 'smith'.
          */
+        String ivFname;
+        String smFname;
+        String ivAdd;
+        String smAdd;
+
+        ivFname = ivanov.getFullName();
+        smFname = smith.getFullName();
+        ivAdd = ivanov.getAddress();
+        smAdd = smith.getAddress();
 
         /*
          * TODO(Студент): Выведите в консоль значения созданных строковых переменных:
@@ -51,5 +64,9 @@ public class Main {
          * Значение каждой переменной должно быть выведено на
          * отдельной строке.
          */
+        System.out.println(ivFname);
+        System.out.println(smFname);
+        System.out.println(ivAdd);
+        System.out.println(smAdd);
     }
 }
