@@ -20,12 +20,12 @@ public class Address { // пункт 2.
     private String country; // пункт 3. Задание переменных
     private String city;
     private String street;
-    private int building;
-    private int apartment;
+    private String building;
+    private String apartment;
 
-    // пункт 4. Объявление методв
+    // пункт 4. Объявление методов
     
-    public Address(String country, String city, String street, int building, int apartment) {
+    public Address(String country, String city, String street, String building, String apartment) {
         // метод принимающий составляющие адреса 
         this.country = country;
         this.city = city;
@@ -47,11 +47,11 @@ public class Address { // пункт 2.
         this.street = streetSet;
     }
 
-    public void setBuild(int buildingSet) {
+    public void setBuild(String buildingSet) {
         this.building = buildingSet;
     }
 
-    public void setApartment(int apartmentSet) {
+    public void setApartment(String apartmentSet) {
         this.apartment = apartmentSet;
     }
 
@@ -68,11 +68,11 @@ public class Address { // пункт 2.
         return street;
     }
 
-    public int getBuilding() {
+    public String getBuilding() {
         return building;
     }
 
-    public int getApartment() {
+    public String getApartment() {
         return apartment;
     }
     
