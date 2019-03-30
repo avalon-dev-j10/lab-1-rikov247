@@ -23,7 +23,7 @@ public class Address { // пункт 2.
     private String building;
     private String apartment;
 
-    // пункт 4. Объявление методв
+    // пункт 4. Объявление методов
     
     public Address(String country, String city, String street, String building, String apartment) {
         // метод принимающий составляющие адреса 

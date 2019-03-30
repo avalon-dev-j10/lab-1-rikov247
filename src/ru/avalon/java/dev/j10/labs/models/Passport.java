@@ -38,6 +38,7 @@ public class Passport { // пункт 5. Делаем класс публичн�
     // пункт 2 с учетом пункта 4
     public Passport(String serAndNum, String name, String surname, String patronymic, int birthDay, int birthMonth, int birthYear, 
                     int issueDay, int issueMonth, int issueYear, String issuingAuthority) {
+        
         this.serAndNum = serAndNum;
         this.name = name;
         this.surname = surname;
@@ -53,7 +54,8 @@ public class Passport { // пункт 5. Делаем класс публичн�
 
     /* метод ниже позволяет учесть существование второго имени (если оно есть, 
       * то будет вызываться метод ниже, если его нет, то будет вызываться метод выше) */
-    public Passport(String serAndNum, String name, String surname, String patronymic, String secName, int birthDay, int birthMonth, int birthYear, int issueDay, int issueMonth, int issueYear, String issuingAuthority) {
+    public Passport(String serAndNum, String name, String surname, String patronymic, String secName, int birthDay, int birthMonth, int birthYear, 
+                    int issueDay, int issueMonth, int issueYear, String issuingAuthority) {
         this(serAndNum, name, surname, patronymic, birthDay, birthMonth, birthYear, issueDay, issueMonth, issueYear, issuingAuthority);
         this.secName = secName;
     }
