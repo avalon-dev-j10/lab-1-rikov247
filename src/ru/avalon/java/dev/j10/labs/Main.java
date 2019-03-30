@@ -1,55 +1,37 @@
 package ru.avalon.java.dev.j10.labs;
 
 import ru.avalon.java.dev.j10.labs.models.Person;
+import ru.avalon.java.dev.j10.labs.commons.Address; // для проверки работы класса Address
+import ru.avalon.java.dev.j10.labs.models.Passport; // для проверки работы класса Passport
 
 public class Main {
+// TODO: были и, наверное, есть проблемы с push и commit в свою созданную ветку лабораторной работы..поэтому так много commitОВ
+    
+    public static void main(String[] args) { // точка входа в приложение
 
-    Main() {
+        Person ivanov = new Person(
+                new Passport("10104017658", "Ivan", "Ivanov", "Ivanovich", 1, 2, 1993, 4, 5, 2017, "Spb"),
+                new Address("Russia", "Saint-Petersburg", "Obruchevich", "1", "1")
+        );
 
-        /*
-         * FIXME(Студент): Измените определение метода так, чтобы он стал точкой входа в приложение.
-         */
+        Person smith = new Person(
+                new Passport("10104017658", "John", "Smith", null, "Edvard", 1, 2, 1993, 4, 5, 2017, "Spb"), // поля ФИО для иностранного имени в конструкторе имеют другой порядок
+                new Address("Russia", "Saint-Petersburg", "Obruchevich", "1", "2")
+        );
 
-        Person ivanov = null;
-        Person smith = null;
+        String ivFname;
+        String smFname;
+        String ivAdd;
+        String smAdd;
 
-        /*
-         * TODO(Студент): Создайте экземпляры класса 'Person'
-         *
-         * 1. Проинициализируейте переменную 'ivanov', так,
-         *    чтобы она адресовала объект типа 'Person'
-         *    описывающий человека по имени 'Иванов Иван Иванович'.
-         *
-         * 2. Проинициализируейте переменную 'smith', так,
-         *    чтобы она адресовала объект типа 'Person'
-         *    описывающий человека по имени 'John Edvard Smith'.
-         */
+        ivFname = ivanov.getFullName();
+        smFname = smith.getFullName();
+        ivAdd = ivanov.getRegistration();
+        smAdd = smith.getRegistration();
 
-        /*
-         * TODO(Студент): Создайте несколько строковых переменных:
-         *
-         * 1. Строковую переменную, содержащую полное имя
-         *    человека, описанного объектом, адресованным
-         *    переменной 'ivanov'.
-         *
-         * 2. Строковую переменную, содержащую полное имя
-         *    человека, описанного объектом, адресованным
-         *    переменной 'smith'.
-         *
-         * 3. Строковую переменную, содержащую адрес проживания
-         *    человека, описанного объектом, адресованным
-         *    переменной 'ivanov'.
-         *
-         * 4. Строковую переменную, содержащую адрес проживания
-         *    человека, описанного объектом, адресованным
-         *    переменной 'smith'.
-         */
-
-        /*
-         * TODO(Студент): Выведите в консоль значения созданных строковых переменных:
-         *
-         * Значение каждой переменной должно быть выведено на
-         * отдельной строке.
-         */
+        System.out.println(ivFname);
+        System.out.println(smFname);
+        System.out.println(ivAdd);
+        System.out.println(smAdd);
     }
 }
