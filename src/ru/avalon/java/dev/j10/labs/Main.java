@@ -21,12 +21,12 @@ public class Main {
          */
         Person ivanov = new Person(
                 new Passport("10104017658", "Ivan", "Ivanov", "Ivanovich", 1, 2, 1993, 4, 5, 2017, "Spb"),
-                new Address("Russia", "Saint-Petersburg", "Obruchevich", 1, 1)
+                new Address("Russia", "Saint-Petersburg", "Obruchevich", "1", "1")
         );
 
         Person smith = new Person(
                 new Passport("10104017658", "John", "Smith", null, "Edvard", 1, 2, 1993, 4, 5, 2017, "Spb"), // поля ФИО для иностранного имени в конструкторе имеют другой порядок
-                new Address("Russia", "Saint-Petersburg", "Obruchevich", 1, 2)
+                new Address("Russia", "Saint-Petersburg", "Obruchevich", "1", "2")
         );
 
         /*
