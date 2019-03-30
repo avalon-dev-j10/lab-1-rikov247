@@ -5,7 +5,8 @@ import ru.avalon.java.dev.j10.labs.commons.Address; // для проверки �
 import ru.avalon.java.dev.j10.labs.models.Passport; // для проверки работы класса Passport
 
 public class Main {
-
+// были и, наверное, есть проблемы с push и commit в свою созданную ветку лабораторной работы..поэтому так много commitОВ
+    
     public static void main(String[] args) { // точка входа в приложение
 
         /*
@@ -21,12 +22,12 @@ public class Main {
          */
         Person ivanov = new Person(
                 new Passport("10104017658", "Ivan", "Ivanov", "Ivanovich", 1, 2, 1993, 4, 5, 2017, "Spb"),
-                new Address("Russia", "Saint-Petersburg", "Obruchevich", 1, 1)
+                new Address("Russia", "Saint-Petersburg", "Obruchevich", "1", "1")
         );
 
         Person smith = new Person(
                 new Passport("10104017658", "John", "Smith", null, "Edvard", 1, 2, 1993, 4, 5, 2017, "Spb"), // поля ФИО для иностранного имени в конструкторе имеют другой порядок
-                new Address("Russia", "Saint-Petersburg", "Obruchevich", 1, 2)
+                new Address("Russia", "Saint-Petersburg", "Obruchevich", "1", "2")
         );
 
         /*
